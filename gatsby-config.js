@@ -27,8 +27,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/themes`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -49,6 +57,10 @@ module.exports = {
         fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
         display: "swap",
       },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {},
     },
   ],
 }
